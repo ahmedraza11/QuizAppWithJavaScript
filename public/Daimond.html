@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Staric Diamond</title>
+    <link rel="icon" type="image/gif/png" href="3.jpg">
+    <style>
+        body{
+            background-color: #e74c3c;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        h1{
+            background-color: #ecf0f1;
+            padding: 5px;
+        }
+        h2{
+            float: right;
+            margin: 10px;
+        }
+        h2 a{
+            text-decoration: none;
+             color: #ecf0f1;
+        
+        }
+        h2 a:hover{
+            color: #f1c40f;
+            cursor: pointer;
+        }
+        #content{
+            
+            width: 500px;
+            height: auto;
+            margin: 20px auto;
+            color: #ecf0f1;
+        }
+            p{
+             color: #ecf0f1;
+             margin-left: 10px;
+            
+        }
+        .footer_span a{
+             color: #ecf0f1;
+            text-decoration: none;
+        }
+        .footer_span a:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <h1>Staric Daimond </h1>
+    <h2><a href="index.html">Main Page</a></h2>
+    <div id="content">
+        <script>
+            function diamond( n ) 
+{
+    n = parseInt(n,20);
+
+    var i, s;
+
+    // top: 1 to n
+    document.write("<pre>");
+    for(i = 1; i <= n; i++ )
+    {
+        // write n-i spaces:
+        for ( s = 1; s <= n-i; s++ )
+        {
+            document.write(" ");
+        }
+        // then write i asterisk+space sets:
+        for ( s = 1; s <= i; s++ )
+        {
+            document.write(" *");
+        }
+        document.write("\n");
+    }
+    // bottom: n-1 down to 1
+    for(i = n-1; i >= 1; i-- )
+    {
+        // write n-i spaces:
+        for ( s = 1; s <= n-i; s++ )
+        {
+            document.write(" ");
+        }
+        // then write i asterisk+space sets:
+        for ( s = 1; s <= i; s++ )
+        {
+            document.write(" *");
+        }
+        document.write("\n");
+    }
+}
+
+diamond(20);
+        </script>
+    </div>
+       <hr>    
+        <p>Thank You For Using This Application Created and Designed By: <span class="footer_span"> <a href="https://www.facebook.com/ahmed.r.attari.7" target="blank">Ahmed Raza Qadri</a> </span> </p>
+        
+</body>
+</html>

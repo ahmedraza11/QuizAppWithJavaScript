@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #2c3e50;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        h1{
+            background-color: #ecf0f1;
+            padding: 5px;
+        }
+        h2{
+            float: right;
+            margin: 10px;
+        }
+        h2 a{
+            text-decoration: none;
+             color: #ecf0f1;
+        
+        }
+        h2 a:hover{
+            color: #f1c40f;
+            cursor: pointer;
+        }
+        #content{
+            
+            width: 300px;
+            height: auto;
+            margin: 150px auto;
+            color: #ecf0f1;
+            font-size: 25px;
+        
+        }
+        .span{
+            color: #e74c3c;
+        }
+        hr{
+            background-color: black;
+        }
+        p{
+             color: #ecf0f1;
+             margin-left: 10px;
+            
+        }
+        .footer_span a{
+             color: #e74c3c;
+            text-decoration: none;
+        }
+        .footer_span a:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        
+    </style>
+</head>
+<body>
+    <h1>Mathematical Table </h1>
+<script>
+            var table = +prompt("Enter you Table Which You want to create");
+            var v1 = +prompt("Enter you Starting Value");
+            var v2 = +prompt("Enter you Ending Value");
+
+</script>
+    <h2><a href="index.html">Main Page</a></h2>
+    <div style="height: auto; padding: 10px;">
+        <script>
+                   document.write("<h3 style='color: #ecf0f1;'>Your Table is <span class='span'>"+table+" </span> , and your starting value is <span class='span'>"+v1+"</span> , and Ending value <span class='span'>"+v2+ "</span> .</h3>");
+
+        </script>
+    </div>
+    <div id="content">
+        <script>
+            
+            if(v1 > v2){
+                document.write("<h3 style=''>Arthametical Error</h3><br />")
+               document.write("Please write valid values only in numbers and Starting value should be greater than Ending value.");
+            }else{
+        
+                for(i = v1;i<=v2;i++){
+                    document.write(table+" x  "+i+" = " + table*i);
+                    document.write("<br>");
+                }
+            }
+        </script>
+    </div>
+    <hr>    
+        <p>Thank You For Using This Application Created and Designed By: <span class="footer_span"> <a href="https://www.facebook.com/ahmed.r.attari.7" target="blank">Ahmed Raza Qadri</a> </span> </p>
+        
+</body>
+</html>

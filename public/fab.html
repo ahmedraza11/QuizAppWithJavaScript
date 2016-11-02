@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci Number Series</title>
+    <link rel="icon" type="image/gif/png" href="3.jpg">
+    
+    <style>
+        body{
+            background-color: #8e44ad;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        h1{
+            background-color: #ecf0f1;
+            padding: 5px;
+        }
+        h2{
+            float: right;
+            margin: 10px;
+        }
+        h2 a{
+            text-decoration: none;
+             color: #ecf0f1;
+        
+        }
+        h2 a:hover{
+            color: #f1c40f;
+            cursor: pointer;
+        }
+        #content{
+            
+            width: 300px;
+            height: auto;
+            margin: 150px auto;
+            color: #ecf0f1;
+            font-size: 25px;
+        
+        }
+        .span{
+            color: #e74c3c;
+        }
+        p{
+             color: #ecf0f1;
+             margin-left: 10px;
+            
+        }
+        .footer_span a{
+             color: #f1c40f;
+            text-decoration: none;
+        }
+        .footer_span a:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        
+    </style>
+</head>
+<body>
+    <h1>Fibonacci number series </h1>
+
+    <h2><a href="index.html">Main Page</a></h2>
+    <div style="height: auto; padding: 10px;">
+   </div>
+    <div id="content">
+        <script>
+            var num;
+function fibonacci(num){
+    var temp;
+    var p1 = 0;
+    var p2 = 1;
+    var num = prompt("Enter Number of terms",num);
+    
+    for (var i = 0; i < num; i++){
+        if (i <= 1){
+            temp = i; 
+        }
+        else {
+            temp = p1 + p2;
+            p1 = p2;
+            p2 = temp;
+        }
+         document.write(temp + "</br>");
+    }
+       
+    }
+
+fibonacci(num);
+
+       </script>
+    </div>
+    <hr>    
+        <p>Thank You For Using This Application Created and Designed By: <span class="footer_span"> <a href="https://www.facebook.com/ahmed.r.attari.7" target="blank">Ahmed Raza Qadri</a> </span> </p>
+        
+</body>
+</html>
