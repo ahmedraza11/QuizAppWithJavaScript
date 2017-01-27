@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quizee</title>
+    <link rel="stylesheet" href="style.css">
+ <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  
+  <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+          
+</head>
+<body>
+    <header>
+        <h3>Quizee <span>Test your sence</span></h3>
+    </header>
+    <section>
+        <span id="wel"><p><span id="welOne">Quizee</span><span id="welTwo"></span></p></span>
+        <h2 id="head">Register Your Self</h2>
+    <!--Registeration Start Here-->
+    <div id="reg_box"  style="display:none;">
+        <form action="" onsubmit="return false">
+        <table>
+            <tr>
+                <td><label for="">First Name</label></td>
+                <td><input type="text" class="mdl-textfield__input" id="firstName" width="200px"></td>
+            </tr>
+            <tr>
+                <td><label for="">Last Name</label></td>
+                <td><input type="text" class="mdl-textfield__input" id="lastName" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Email</label></td>
+                <td><input type="email" class="mdl-textfield__input" id="email" required> </td>
+            </tr>
+            <tr>
+                <td><label for="">Password</label></td>
+                <td><input type="password" class="mdl-textfield__input" id="password" required></td>
+            </tr>
+            
+        </table>
+        <input type="submit" class="btn" value="Register" onclick="validate()" id="btn_reg">
+        </form>
+    </div>
+    <!--login Ends Here-->
+    
+      <!--<div id="login_box">
+        <form action="" onsubmit="return false">
+        <table>
+            <tr>
+                <td><label for="">Email</label></td>
+                <td><input type="email" class="mdl-textfield__input" id="email" required> </td>
+            </tr>
+            <tr>
+                <td><label for="">Password</label></td>
+                <td><input type="password" class="mdl-textfield__input" id="password" required></td>
+            </tr>
+            
+        </table>
+        <input type="submit" class="btn" value="login" onclick="login()" id="btn_reg">
+        </form>
+    </div>-->
+    <!--login Ends Here-->
+   
+
+
+        <div id="quiz_box">
+            <h5 id="questionBar"></h5>
+      <form action="#">
+    <p>
+      <input name="group1" type="radio" id="test1"  onclick="enableNextBtn()" />
+      <label for="test1" id="option1"> </label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test2"  onclick="enableNextBtn()" />
+      <label for="test2" id="option2"></label>
+    </p>
+    <p>
+      <input class="with-gap" name="group1" type="radio" id="test3"  onclick="enableNextBtn()" />
+      <label for="test3" id="option3"></label>
+    </p>
+  </form>
+        <button class="btn" id="btn_next" onclick="next()">Next</button>
+        </div>
+    
+    
+        <div id="result">
+            <table class="bordered">
+                <tr>
+                    <th  colspan="2" id="res_head"></th>
+                </tr>
+                <tr>
+                    <td>Correct Answer</td>
+                    <td>Percentage</td>
+                </tr>
+                <tr>
+                    <td id="res_cor"></td>
+                    <td id="res_per"></td>
+                </tr>
+                
+            </table>
+        </div>
+    
+    
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
