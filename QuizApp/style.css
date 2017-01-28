@@ -1,6 +1,8 @@
 body{
     padding: 0px;
     margin: 0px;
+    background-image: url(back.jpg);
+    background-size: contain;
 }
 header{
     width: 100%;
@@ -79,6 +81,7 @@ input[type=text] , input[type=password] , input[type=email]{
     top:40px;
     left: 50px;
 }
+
 #btn_next{
     float:right;
     margin-top:150px;
@@ -112,4 +115,23 @@ input[type=text] , input[type=password] , input[type=email]{
 }
 .res_headd span{
     color: #27ae60;
+}
+#ScreenSplash{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2980b9;
+}
+#ScreenSplash h1,h3{
+    text-align: center;
+    margin-top: 180px;
+}
+#ScreenSplash h1,h3{
+    color: #ecf0f1;
+    font-family: 'Tangerine', serif;
+    text-shadow: 4px 4px 4px #aaa;
+
+}
+#reg_box{
+    display: none;
 }

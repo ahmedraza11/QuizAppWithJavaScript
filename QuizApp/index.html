@@ -12,17 +12,19 @@
   
   <script src="sweetalert-master/dist/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
-          
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+
 </head>
 <body>
-    <header>
-        <h3>Quizee <span>Test your sence</span></h3>
+    <header id="top_head">
+        <h3 class="animated  lightSpeedIn">Quizee <span>Test your sence</span></h3>
     </header>
-    <section>
+    <section id="sec" class="animated flipInX">
         <span id="wel"><p><span id="welOne">Quizee</span><span id="welTwo"></span></p></span>
         <h2 id="head">Register Your Self</h2>
     <!--Registeration Start Here-->
-    <div id="reg_box"  style="display:none;">
+    <div id="reg_box">
         <form action="" onsubmit="return false">
         <table>
             <tr>
@@ -105,8 +107,14 @@
             </table>
         </div>
     
-    
+        
     </section>
+    <div id="ScreenSplash">
+            <img src="Saylani-logo.png" class="animated lightSpeedIn" alt="">
+            <h1 class="animated flipInX">Welcome To Saylani Mass Training Program</h1>
+            <h3 class="animated flipInY">Quiz Panel</h3>
+     </div>
+    
     <script src="app.js"></script>
 </body>
 </html>

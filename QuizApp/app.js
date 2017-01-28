@@ -1,5 +1,11 @@
 var QuizIndex = 0;
 var Correct = 0;
+var bool;
+if(bool == true){
+    document.getElementById("reg_box").style.display="none";
+}else{
+    document.getElementById("reg_box").style.display="block";
+}
 var question = [
     {
          id: 0,
@@ -84,6 +90,7 @@ var question = [
     
 ];
 function register() {
+    
     var firstName = document.getElementById("firstName").value;
     var lastName = document.getElementById("lastName").value;
     var email = document.getElementById("email").value;
@@ -101,10 +108,17 @@ function register() {
 }
 window.onload = function () {
    
+    setInterval(function(){
     
+    document.getElementById("ScreenSplash").className= "animated flipOutY";
+    document.getElementById("top_head").style.display="block";
+    document.getElementById("top_head").className= "animated fadeInUp";
+    document.getElementById("sec").style.display="block";
+        
+    } , 4000);
     
+    document.getElementById("sec").style.display="none";
     document.getElementById("btn_next").setAttribute("style","display:none");
-    document.getElementById("reg_box").style.display="block";
     document.getElementById("questionBar").innerHTML = question[0].ques;
     document.getElementById("option1").innerHTML = question[0].op1;
     document.getElementById("test1").value = question[0].op1;
@@ -115,6 +129,7 @@ window.onload = function () {
     
 }
 function validate() {
+    document.getElementById("reg_box").display="none";
     var firstName = document.getElementById("firstName").value;
     var lastName = document.getElementById("lastName").value;
     var email = document.getElementById("email").value;
@@ -136,9 +151,10 @@ function validate() {
     if(!firstName == "" && !lastName == "" && !email == "" && !password == ""){
         register();
         swal("Good job "+user.Fname+" "+user.Lname+"!", "You are now Successfully Registered!", "success");
-        
-        document.getElementById("quiz_box").style.display="block";
         document.getElementById("reg_box").style.display="none";
+        document.getElementById("sec").className = "animated flipOutY";
+        
+        
         document.getElementById("head").innerHTML = "Quiz Test";
         document.getElementById("welOne").innerHTML = "Welcome";
         document.getElementById("welTwo").innerHTML = user.Fname +" "+ user.Lname;
@@ -148,6 +164,8 @@ function validate() {
             text: "Be Ready To Get Started With<span style='color:#F8BB86'>Test<small>zzz</small><span>.",
             html: true
         });
+        document.getElementById("sec").className = "animated flipInX";
+        document.getElementById("quiz_box").style.display="block";
         
     }else{
         sweetAlert("Oops...", "Something Went wrong please check you info", "error");
@@ -203,7 +221,11 @@ function next() {
         
         document.getElementById("quiz_box").style.display="none";
         document.getElementById("head").innerHTML = "Result";
+        
         document.getElementById("result").style.display="block";
+        if(per == 100){
+            swal("Congractulations!", "Great! You have Passed With 100%", "success");
+        }
         if(per > 60){
             document.getElementById("res_head").innerHTML = "Great <span>"+user.Fname+"</span>! You Have Passed";
             document.getElementById("res_head").className = "res_headd";
